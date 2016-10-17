@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <label id="LblText">offline</label>
+  <button type="button" onclick=checkConnection();>Click Me !</button>
+</body>
+  <script>
+  function checkConnection() {
+        if(navigator.onLine) {
+          status = 'Online';
+        } else {
+          status = 'Offline';
+        }
+        document.getElementById('LblText').innerText = status;
+    }
+
+    checkConnection();
+    </script>
+</html>
